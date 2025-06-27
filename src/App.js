@@ -11,15 +11,15 @@ function App() {
   const fetchUser = useCallback(async () => {
     setIsLoading(true);
     try {
-      // Формируем корректный URL
+      
       const url = genderFilter
         ? `${API_URL}?gender=${encodeURIComponent(genderFilter.trim())}`
         : API_URL;
 
-      console.log('Запрос к API:', url); // Отладочный лог
+      console.log('Запрос к API:', url); 
 
       const response = await fetch(url);
-      console.log('Ответ от сервера:', response.status); // Проверяем статус ответа
+      console.log('Ответ от сервера:', response.status); 
 
       if (!response.ok) {
         throw new Error(`Ошибка при загрузке данных: ${response.status}`);
@@ -59,7 +59,7 @@ function App() {
         <p>Нет данных</p>
       )}
 
-      {/* Разделим карточку и нижнюю часть */}
+      
       <div className="controls-container">
         <select value={genderFilter} onChange={(e) => setGenderFilter(e.target.value)}>
           <option value="">Все</option>
