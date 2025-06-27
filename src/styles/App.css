@@ -1,0 +1,113 @@
+/* Основной контейнер приложения */
+.app {
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение элементов */
+    align-items: center; /* Центрирование по горизонтали */
+  }
+  
+  /* Заголовок */
+  h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Карточка пользователя */
+  .user-card-container {
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    margin-bottom: 20px; /* Отступ между карточкой и нижней частью */
+  }
+  
+  .user-card {
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    max-width: 300px;
+  }
+  
+  .user-card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .user-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 2px solid #e0e0e0;
+  }
+  
+  .user-card h2 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .user-card p {
+    margin: 8px 0;
+    color: #555;
+    font-size: 0.95rem;
+  }
+  
+  /* Лоадер */
+  .loader {
+    font-size: 1.1rem;
+    color: #666;
+    animation: blink 1.5s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  
+  /* Кнопка */
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    height: 40px; /* Установили фиксированную высоту */
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Фильтр пола (селект) */
+  select {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+    height: 40px; /* Установили ту же высоту, что и у кнопки */
+  }
+  
+  select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+  }
+  
+  /* Нижняя часть (селектор + кнопка) */
+  .controls-container {
+    display: flex;
+    align-items: center; /* Выровняем элементы по вертикали */
+    gap: 15px; /* Расстояние между селектором и кнопкой */
+    justify-content: center; /* Центрирование по горизонтали */
+  }
